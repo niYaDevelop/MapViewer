@@ -57,8 +57,8 @@ void MapWidget::mouseMoveEvent(QMouseEvent *event) {
     int offsetY = (height() - scaledH) / 2;
 
     // Позиция мыши относительно изображения в масштабированных пикселях
-    int scaledX = event->position().x() - offsetX;
-    int scaledY = event->position().y() - offsetY;
+    int scaledX = event->x() - offsetX;
+    int scaledY = event->y() - offsetY;
 
     // Проверяем, попадает ли в изображение
     if (scaledX >= 0 && scaledX < scaledW && scaledY >= 0 && scaledY < scaledH) {
